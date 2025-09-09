@@ -78,7 +78,7 @@ options(base_font_size = 32)
 responses <- get_responses()
 ```
 
-## Attendee Locations {.plot-slide}
+## Attendee Locations TESTING {.plot-slide}
 
 ```{r plot-location}
 plot_location(responses)
