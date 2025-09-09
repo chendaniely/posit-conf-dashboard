@@ -1,0 +1,239 @@
+---
+title: "posit::conf(2025)"
+# title: posit-conf-2025   # Use this title for first deployment
+format:
+  revealjs:
+    theme:
+      - default
+      - assets/dashboard/styles.scss
+    width: 1920
+    height: 1080
+    menu: false
+    fig-dpi: 144
+    fig-width: 14
+    fig-height: 7
+    auto-slide: 10000
+    margin: 0.05
+    loop: true
+    transition: slide
+    title-slide-attributes:
+      data-background-image: "assets/dashboard/opening-slide.svg"
+      data-background-color: "#72994D"
+      data-background-size: contain
+survey-cta: |
+  pos.it/conf-survey
+editor:
+  render-on-save: true
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup}
+library(dplyr, warn.conflicts = FALSE)
+library(readr)
+library(tidyr)
+library(ggplot2)
+library(maps) # Needed for `map_data()`
+library(svglite)
+library(ggwordcloud)
+library(yaml) # need to parse dependencies within quarto docs
+
+options(ark.ragg = FALSE)
+```
+
+```{r load-scripts}
+source("R/dashboard.R")
+source("R/db.R")
+```
+
+```{r plot-themes}
+library(systemfonts)
+register_font(
+  "open sans",
+  plain = "assets/fonts/OpenSans-Regular.ttf",
+  bold = "assets/fonts/OpenSans-Medium.ttf",
+  italic = "assets/fonts/OpenSans-Italic.ttf",
+  bolditalic = "assets/fonts/OpenSans-MediumItalic.ttf"
+)
+
+register_font(
+  "source code pro",
+  plain = "assets/fonts/SourceCodePro-Light.ttf",
+  bold = "assets/fonts/SourceCodePro-Regular.ttf",
+  italic = "assets/fonts/SourceCodePro-Italic.ttf",
+  bolditalic = "assets/fonts/SourceCodePro-SemiBold.ttf"
+)
+
+# if (FALSE) {
+#   library(ragg)
+# }
+# knitr::opts_chunk$set(dev = "ragg_png")
+
+theme_set(theme_minimal(base_family = "open sans", base_size = 32))
+options(base_font_size = 32)
+```
+
+```{r get-responses}
+#options(local_data = "responses.rds")
+responses <- get_responses()
+```
+
+## Attendee Locations {.plot-slide}
+
+```{r plot-location}
+plot_location(responses)
+```
+
+::: qr-footer
+{{< meta survey-cta >}}
+
+```{=html}
+<img src="assets/dashboard/qr-code.png" alt="">
+```
+:::
+
+```{=html}
+<style>
+.reveal h2 {
+    color: #297075;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.reveal code {
+  color: #419599;
+}
+
+#title-slide > * {
+    display: none;
+}
+
+.qr-footer {
+    font-size: 1.5rem;
+    color: #888;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    gap: 2rem;
+}
+
+.qr-footer p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.qr-footer img {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+</style>
+```
+
+## I'm a ________ person
+
+```{r plot-person}
+plot_person(responses)
+```
+
+::: qr-footer
+{{< meta survey-cta >}}
+
+```{=html}
+<img src="assets/dashboard/qr-code.png" alt="">
+```
+:::
+
+## Careers in Data Science
+
+```{r plot-careers}
+plot_careers(responses)
+```
+
+::: qr-footer
+{{< meta survey-cta >}}
+
+```{=html}
+<img src="assets/dashboard/qr-code.png" alt="">
+```
+:::
+
+## `conf` Over the Years
+
+```{r plot-conf-over-years}
+plot_conf_over_years(responses)
+```
+
+::: qr-footer
+{{< meta survey-cta >}}
+
+```{=html}
+<img src="assets/dashboard/qr-code.png" alt="">
+```
+:::
+
+## Favorite [R]{style="color: #994665"} Packages
+
+```{r plot-pkgs-r}
+plot_word_cloud(responses, pkgs_r)
+```
+
+::: qr-footer
+{{< meta survey-cta >}}
+
+```{=html}
+<img src="assets/dashboard/qr-code.png" alt="">
+```
+:::
+
+## Favorite [Python]{style="color: #419599"} Packages
+
+```{r plot-pkgs-py}
+plot_word_cloud(responses, pkgs_python)
+```
+
+::: qr-footer
+{{< meta survey-cta >}}
+
+```{=html}
+<img src="assets/dashboard/qr-code.png" alt="">
+```
+:::
+
+<!-- {{ < qrcode https://pos.it/funform colorDark="#297075" height=800 width=800 > }} -->
+
+## {#closing background-image="assets/dashboard/closing-slide.svg" background-size="contain" background-color="#429599"}
+
+```{=html}
+<script>
+// Reload the page when auto-slide advances from last slide to title slide
+document.addEventListener('DOMContentLoaded', function() {
+  let isAutoSliding = true;
+
+  Reveal.on('slidetransitionend', function(event) {
+    if (!isAutoSliding) {
+      return
+    }
+
+    const isTitleSlide = event.currentSlide.id === "title-slide";
+    if (!isTitleSlide) {
+      return
+    }
+
+    location.reload()
+  })
+
+  Reveal.on('autoslideresumed', (event) => {
+    isAutoSliding = true
+  })
+
+  Reveal.on('autoslidepaused', (event) => {
+    isAutoSliding = false
+  })
+})
+</script>
+```

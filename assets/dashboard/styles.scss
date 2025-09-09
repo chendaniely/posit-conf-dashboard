@@ -1,0 +1,16 @@
+/*-- scss:defaults --*/
+$link-color: #994665 !default;
+
+/*-- scss:rules --*/
+.hide-title>h2 {
+    display: none;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
