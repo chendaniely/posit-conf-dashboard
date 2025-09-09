@@ -14,3 +14,5 @@ Imports:
     ggwordcloud,
     yaml,
     ragg
+Suggests:
+    rsconnect::writeManifest()
