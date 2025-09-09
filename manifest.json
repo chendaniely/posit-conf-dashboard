@@ -11,7 +11,7 @@
   },
   "environment": {
     "r": {
-      "requires": ">= 4.4.0"
+      "requires": "~=4.5.0"
     }
   },
   "quarto": {
@@ -3161,7 +3161,7 @@
       "checksum": "654a9739032de000674f9bd0fab7d445"
     },
     ".Rprofile": {
-      "checksum": "3e1a6f97e901013674c79aefcb6ab185"
+      "checksum": "b42df77f1af68a45f3326af52ef28c10"
     },
     "assets/dashboard/closing-slide.svg": {
       "checksum": "a0d5f49d87eb94cd6f9bb7c9ac6a4cc2"
@@ -3206,16 +3206,16 @@
       "checksum": "f02cbb0ae2d67025fe6ba58590fe2aa1"
     },
     "dashboard_files/figure-revealjs/plot-location-1.png": {
-      "checksum": "a4182d099a619c6ed33d8772389a38dc"
+      "checksum": "40d014de026bbe468df5889c74aea174"
     },
     "dashboard_files/figure-revealjs/plot-person-1.png": {
       "checksum": "417fd5b3cee2546273cf042a78a022aa"
     },
     "dashboard_files/figure-revealjs/plot-pkgs-py-1.png": {
-      "checksum": "01a1dc23ccad0df8efc6691738c3eccc"
+      "checksum": "43466e654a13d1dacf4b993ab39b0e23"
     },
     "dashboard_files/figure-revealjs/plot-pkgs-r-1.png": {
-      "checksum": "82dcc4761f104e90fef6e947d95ab4e6"
+      "checksum": "2d46a09ba5d2aaecab1e69ed815008ca"
     },
     "dashboard_files/libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -3428,16 +3428,16 @@
       "checksum": "9c28a4d1f1502771665328f6abb091c0"
     },
     "dashboard.html": {
-      "checksum": "7868d2d247cebffc7ff1c1cd70b1f1be"
+      "checksum": "d604ca588f34706115abc23bc20dc73c"
     },
     "dashboard.qmd": {
-      "checksum": "d3e99f1defeab0f5854eb091750c9666"
-    },
-    "DESCRIPTION": {
-      "checksum": "cce3b7d218c102593f5850f94e238d92"
+      "checksum": "a65d022a9d8f00c5be66fcbf8e71cbb0"
     },
     "LICENSE": {
       "checksum": "6b1ffa52c999912a1d807ffd665e782d"
+    },
+    "Makefile": {
+      "checksum": "b0cad44a267c72a5a9f1ea37e12f68f7"
     },
     "R/dashboard.R": {
       "checksum": "082ad60fdde19c93140af0ee06222ccf"
