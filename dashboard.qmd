@@ -78,7 +78,7 @@ options(base_font_size = 32)
 responses <- get_responses()
 ```
 
-## Attendee Locations 2024-09-08 20:37 {.plot-slide}
+## Attendee Locations {.plot-slide}
 
 ```{r plot-location}
 plot_location(responses)
