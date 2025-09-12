@@ -17,11 +17,11 @@ format:
     loop: true
     transition: slide
     title-slide-attributes:
-      data-background-image: "assets/dashboard/opening-slide.svg"
-      data-background-color: "#72994D"
+      data-background-image: "assets/dashboard/slide-title.png"
+      data-background-color: "#94BD8F"
       data-background-size: contain
 survey-cta: |
-  pos.it/conf-survey
+  pos.it/funform2025
 editor:
   render-on-save: true
 editor_options:
@@ -95,13 +95,13 @@ plot_location(responses)
 ```{=html}
 <style>
 .reveal h2 {
-    color: #297075;
+    color: #72994E;
     margin-top: 1rem;
     margin-left: 1rem;
 }
 
 .reveal code {
-  color: #419599;
+  color: #72994E;
 }
 
 #title-slide > * {
@@ -190,7 +190,7 @@ plot_word_cloud(responses, pkgs_r)
 ```
 :::
 
-## Favorite [Python]{style="color: #419599"} Packages
+## Favorite [Python]{style="color: #72994E"} Packages
 
 ```{r plot-pkgs-py}
 plot_word_cloud(responses, pkgs_python)
@@ -204,9 +204,18 @@ plot_word_cloud(responses, pkgs_python)
 ```
 :::
 
-<!-- {{ < qrcode https://pos.it/funform colorDark="#297075" height=800 width=800 > }} -->
+## {.center}
 
-## {#closing background-image="assets/dashboard/closing-slide.svg" background-size="contain" background-color="#429599"}
+<center>
+{{< qrcode https://pos.it/funform2025 colorDark="#72994E" height=800 width=800 >}}
+
+<br />
+
+<https://pos.it/funform2025>
+
+</center>
+
+## {#closing background-image="assets/dashboard/slide-closing.png" background-size="contain" background-color="#72994E"}
 
 ```{=html}
 <script>
