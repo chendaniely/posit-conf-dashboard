@@ -18,7 +18,7 @@ format:
     transition: slide
     title-slide-attributes:
       data-background-image: "assets/dashboard/slide-title.png"
-      data-background-color: "#94BD8F"
+      data-background-color: "#94BDBFFF"
       data-background-size: contain
 survey-cta: |
   pos.it/funform2025
@@ -215,7 +215,7 @@ plot_word_cloud(responses, pkgs_python)
 
 </center>
 
-## {#closing background-image="assets/dashboard/slide-closing.png" background-size="contain" background-color="#72994E"}
+## {#closing background-image="assets/dashboard/slide-closing.png" background-size="contain" background-color="#94BDBFFF"}
 
 ```{=html}
 <script>
