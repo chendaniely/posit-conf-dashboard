@@ -152,6 +152,7 @@ plot_careers <- function(responses) {
 
 plot_conf_over_years <- function(responses) {
 	confs <- c(
+		"2025 Atlanta",
 		"2024 Seattle",
 		"2023 Chicago",
 		"2022 Washington D.C.",
@@ -177,11 +178,12 @@ plot_conf_over_years <- function(responses) {
 		) +
 		scale_fill_manual(
 			values = c(
-				"#A67380FF",
-				"#8AA67AFF",
-				"#419498FF",
+				"#94BDBFFF",
+				"#213D4FFF",
+				"#F6A294FF",
+				"#72994EFF",
 				"#447098FF",
-				"#F4C540FF",
+				"#E7B10AFF",
 				"#ED6331FF",
 				"#994665FF",
 				"#72984EFF"
